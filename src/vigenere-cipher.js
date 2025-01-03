@@ -25,7 +25,7 @@ class VigenereCipheringMachine {
     this.reverse = r;
   }
   encrypt(message, key) {
-    if (arguments[0] === undefined || arguments[1] === undefined || arguments.length < 2) {
+    if (arguments[0] === undefined || arguments[1] === undefined) {
       throw new Error("Incorrect arguments!");
     }
     let newKey = "";
@@ -52,7 +52,7 @@ class VigenereCipheringMachine {
     return this.reverse ? resultArray.reverse().join("") : resultArray.join("");
   }
   decrypt(message, key) {
-    if (arguments[0] === undefined || arguments[1] === undefined || arguments.length < 2) {
+    if (arguments[0] === undefined || arguments[1] === undefined) {
       throw new Error("Incorrect arguments!");
     }
     let newKey = "";
