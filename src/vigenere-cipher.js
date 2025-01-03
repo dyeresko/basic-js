@@ -49,7 +49,11 @@ class VigenereCipheringMachine {
         resultArray.push(newMessage[i]);
       }
     }
-    return this.reverse ? resultArray.reverse().join("") : resultArray.join("");
+    if (this.reverse === false) {
+      return resultArray.reverse().join("");
+    } else {
+      return resultArray.join("");
+    }
   }
   decrypt(message, key) {
     if (arguments[0] === undefined || arguments[1] === undefined) {
@@ -76,7 +80,11 @@ class VigenereCipheringMachine {
         resultArray.push(newMessage[i]);
       }
     }
-    return this.reverse ? resultArray.reverse().join("") : resultArray.join("");
+    if (this.reverse === false) {
+      return resultArray.reverse().join("");
+    } else {
+      return resultArray.join("");
+    }
   }
 }
 
